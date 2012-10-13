@@ -21,7 +21,7 @@ Improved interface a bit
 ## Publish new version
 
 * Change version in package.json
-* git tag -a v0.0.1 -m 'version 0.0.1'
+* git tag -a v0.0.2 -m 'version 0.0.2'
 * git push --tags
 * npm publish
 
