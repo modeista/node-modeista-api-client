@@ -42,11 +42,12 @@ module.exports = class Client
       return callback(new Error(if body then body.message else "Request failed.")) unless res.statusCode >= 200 && res.statusCode < 300
       callback null, body, res.statusCode
 
-  _reqWithData: (method, path, params, data, headers = {}, actor, callback) =>
+  _reqWithData: (method, path, params, data, headers = {}, actAsActorId, callback) =>
     headers['Content-Type'] = 'application/json' if data
     headers['Accept'] = 'application/json'
     headers['authorization'] = "Bearer #{@options.bearerToken}" if @options.bearerToken
-    headers['X-ClientId'] = @options.clientId if @options.clientId
+    #headers['X-ClientId'] = @options.clientId if @options.clientId
+    headers['X-Act-As-ActorId'] = actAsActorId if actAsActorId
 
     _.extend headers, @options.headers
 
@@ -64,18 +65,18 @@ module.exports = class Client
        @_handleResult res, body, callback
 
 
-  post: (path, data, actor, callback) =>
-    @_reqWithData "POST", path, null, data, null, actor, callback
+  post: (path, data, actAsActorId, callback) =>
+    @_reqWithData "POST", path, null, data, null, actAsActorId, callback
 
-  patch: (path, data, actor, callback) =>
-    @_reqWithData "PATCH", path, null, data, null, actor, callback
+  patch: (path, data, actAsActorId, callback) =>
+    @_reqWithData "PATCH", path, null, data, null, actAsActorId, callback
 
-  put: (path, data, actor, callback) =>
-    @_reqWithData "PUT", path, null, data, null, actor, callback
+  put: (path, data, actAsActorId, callback) =>
+    @_reqWithData "PUT", path, null, data, null, actAsActorId, callback
 
-  delete: (path, params, actor, callback) =>
-    @_reqWithData "DELETE", path, params, null, null, actor, callback
+  delete: (path, params, actAsActorId, callback) =>
+    @_reqWithData "DELETE", path, params, null, null, actAsActorId, callback
 
-  get: (path, params, actor, callback) =>
-    @_reqWithData "GET", path, params, null, null, actor, callback
+  get: (path, params, actAsActorId, callback) =>
+    @_reqWithData "GET", path, params, null, null, actAsActorId, callback
 

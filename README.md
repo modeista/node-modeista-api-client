@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.0.2
+Improved interface a bit
+
 ### 0.0.1
 
 * First version - totally incomplete.
