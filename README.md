@@ -7,8 +7,11 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.0.3
+* Added more functions.
+
 ### 0.0.2
-Improved interface a bit
+* Improved interface a bit
 
 ### 0.0.1
 
@@ -21,7 +24,7 @@ Improved interface a bit
 ## Publish new version
 
 * Change version in package.json
-* git tag -a v0.0.2 -m 'version 0.0.2'
+* git tag -a v0.0.3 -m 'version 0.0.3'
 * git push --tags
 * npm publish
 
@@ -37,7 +40,7 @@ Improved interface a bit
 
 ## Copyright
 
-Copyright (c) 2012 Martin Wawrusch See LICENSE for
+Copyright (c) 2012 Modeista, Inc. See LICENSE for
 further details.
 
 

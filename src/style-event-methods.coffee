@@ -13,6 +13,9 @@ module.exports = class StyleEventMethods
   post: (data = {},actAsActorId = null, cb = ->) =>
     @apiClient.post "/style-events", data, actAsActorId, cb
 
+  postImport: (data = {},actAsActorId = null, cb = ->) =>
+    @apiClient.post "/style-events/import", data, actAsActorId, cb
+
   patch: (styleEventId,data = {}, actAsActorId = null,cb = ->) =>
     @apiClient.patch "/style-events/#{styleEventId}", data, actAsActorId, cb
 
