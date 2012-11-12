@@ -34,7 +34,7 @@ module.exports = class Client
 
       body = null
 
-      #console.log "WE ARE HERE #{bodyBeforeJson}"
+      console.log "WE ARE HERE #{bodyBeforeJson}"
       if bodyBeforeJson and bodyBeforeJson.length > 0
         try
           body = JSON.parse(bodyBeforeJson)
