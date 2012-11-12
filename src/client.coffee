@@ -4,6 +4,7 @@ request = require 'request'
 _ = require 'underscore'
 StyleEventMethods = require './style-event-methods'
 ChannelMethods = require './channel-methods'
+UserMethods = require './user-methods'
 
 module.exports = class Client
   constructor: (@endpoint, @options = {}) ->
@@ -21,6 +22,7 @@ module.exports = class Client
 
     @styleEvents  = new StyleEventMethods @
     @channels = new ChannelMethods @
+    @users = new UserMethods @
 
   _cleanEndpoint: (endpoint) =>
     return null unless endpoint

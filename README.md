@@ -24,9 +24,9 @@ Used internally for now.
 ## Publish new version
 
 * Change version in package.json
-* git tag -a v0.0.3 -m 'version 0.0.3'
-* git push --tags
-* npm publish
+git tag -a v0.0.3 -m 'version 0.0.3'
+git push --tags
+npm publish
 
 ## Contributing to node-modeista-api-client
  
