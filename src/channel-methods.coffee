@@ -47,3 +47,5 @@ module.exports = class ChannelMethods
   deleteStyleEvent: (channelId,styleEventId,actAsActorId = null, cb = ->) =>
     @apiClient.delete "/channels/#{channelId}/style-events/#{styleEventId}", null, actAsActorId, cb
 
+  postStyleEventsForConnections: (channelId,hashes = [],actAsActorId = null, cb = ->) =>
+    @apiClient.post "/channels/#{channelId}/style-events-for-connections", hashes : hashes, actAsActorId, cb
