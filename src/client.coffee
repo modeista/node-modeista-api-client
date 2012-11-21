@@ -6,6 +6,7 @@ StyleEventMethods = require './style-event-methods'
 ChannelMethods = require './channel-methods'
 UserMethods = require './user-methods'
 StylistMethods = require './stylist-methods'
+ActionMethods = require './action-methods'
 
 module.exports = class Client
   constructor: (@endpoint, @options = {}) ->
@@ -25,6 +26,7 @@ module.exports = class Client
     @channels = new ChannelMethods @
     @users = new UserMethods @
     @stylists = new StylistMethods @
+    @actions = new ActionMethods @
 
   _cleanEndpoint: (endpoint) =>
     return null unless endpoint
