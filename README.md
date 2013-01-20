@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.0.4
+* Updated packages to current
+
 ### 0.0.3
 * Added more functions.
 
@@ -24,7 +27,9 @@ Used internally for now.
 ## Publish new version
 
 * Change version in package.json
-git tag -a v0.0.3 -m 'version 0.0.3'
+git add . -A
+git commit -m "Upgrading to v0.0.4"
+git tag -a v0.0.4 -m 'version 0.0.4'
 git push --tags
 npm publish
 
