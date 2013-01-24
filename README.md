@@ -8,6 +8,9 @@ Used internally for now.
 ## Release Notes
 
 ### 0.0.5
+* Argh - stupid mistake fixed.
+
+### 0.0.5
 * Added basic comment support
 
 ### 0.0.4
@@ -31,8 +34,8 @@ Used internally for now.
 
 * Change version in package.json
 git add . -A
-git commit -m "Upgrading to v0.0.5"
-git tag -a v0.0.5 -m 'version 0.0.5'
+git commit -m "Upgrading to v0.0.6"
+git tag -a v0.0.6 -m 'version 0.0.6'
 git push --tags
 npm publish
 
