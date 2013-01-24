@@ -5,7 +5,7 @@ module.exports = class StyleEventCommentMethods
 
   all: (styleEventId,options = {},cb = ->) =>
     return cb new Error("Parameter styleEventId required.") unless styleEventId
-    @apiClient.get "/style-events/:styleEventId/comments", options.params, options.actAsActorId, cb
+    @apiClient.get "/style-events/#{styleEventId}/comments", options.params, options.actAsActorId, cb
 
   post: (styleEventId,data = {},options = {},cb = ->) =>
     return cb new Error("Parameter styleEventId required.") unless styleEventId
