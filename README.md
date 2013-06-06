@@ -7,6 +7,9 @@ Used internally for now.
 
 ## Release Notes
 
+### 0.0.8
+* updated dependencies.
+
 ### 0.0.7
 * It is quite obvious that I lack sleep today.
 
@@ -37,8 +40,8 @@ Used internally for now.
 
 * Change version in package.json
 git add . -A
-git commit -m "Upgrading to v0.0.7"
-git tag -a v0.0.7 -m 'version 0.0.7'
+git commit -m "Upgrading to v0.0.8"
+git tag -a v0.0.8 -m 'version 0.0.8'
 git push --tags
 npm publish
 
